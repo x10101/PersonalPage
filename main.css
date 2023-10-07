@@ -1,0 +1,56 @@
+.card {
+    background-color: rgb(235, 225, 211);
+    height: 500px;
+    width: 300px;
+    margin: auto;
+    position: relative;
+    text-align: center;
+}
+
+.card ul {
+    margin: 0 25%;
+}
+
+.card li {
+    text-align: left;
+}
+
+#hello {
+    width: 300px;
+    height: 50px;
+    position: relative;
+    border-radius: 10px;
+    margin: 10px auto 30px auto;
+    background-color: rgb(70, 70, 70);
+    color: white;
+    font-family: "comic sans ms";
+}
+
+#hello p {
+    text-align: center;
+    line-height: 50px;
+}
+
+#pic{
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    position: absolute; /*絕對定位*/
+    left: 25%;
+    animation-name: MovePic; /*動畫名稱*/
+    animation-duration: 3s; /*動畫時間*/
+    animation-delay: 0s; /*動畫延遲時間*/
+    animation-iteration-count: infinite; /*動畫重複次數，infinite 無限重複*/
+}
+
+@keyframes MovePic{ /*@keyframe 自訂動畫名稱、屬性變化*/
+    from{
+        transform:rotate(0deg);
+        /*transfom讓元素可以被平移、旋轉、縮放和傾斜*/
+        /*rotate() 旋轉*/
+        /*deg 旋轉角度*/
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
