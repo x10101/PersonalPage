@@ -5,9 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href = "main.css">
     <script src = "hello.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>101</title>
 </head>
 <body>
+    <script>
+        $(document).ready(function() {
+            $("#button").on("click", function(){
+                $("#button").fadeOut(500, function() {
+                    $("#button").fadeIn(500);
+                });
+            });
+        });
+    </script>
+
     <div class = "card">
         <h1>101</h1>
         <div style = "height: 150px;">
@@ -23,7 +34,7 @@
         </ul>
         <h2>Who are u?</h2>
         <input id = "Name" type = "text" placeholder = "Name">
-        <input type = "submit" value = "Hi!" onclick = "showHello()">
+        <input id = "button" type = "submit" value = "Hi!" onclick = "showHello()">
     </div>
     <div id = "hello" style = "visibility: hidden;">
         <p>Hello, <span id = "unknow"></span>.</p>
